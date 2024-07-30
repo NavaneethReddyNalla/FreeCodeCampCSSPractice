@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --search-border: #bbb;
+    --search-focus-border: #3a71ca;
+}
+
+body {
+    text-align: center;
+    padding: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+}
+
+.container input {
+    width: 33%;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: 2px solid var(--search-border);
+    transition: width 0.4s;
+}
+
+.container input::placeholder {
+    transition: all 1s;
+}
+
+.container input:focus {
+    width: 100%;
+    border-color: var(--search-focus-border);
+}
+
+.container input:focus::placeholder {
+    opacity: 0;
+}
