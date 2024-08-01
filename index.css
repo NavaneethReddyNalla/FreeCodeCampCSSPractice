@@ -33,6 +33,10 @@ header {
     border-bottom-right-radius: 10px;
 }
 
+.nav-bar li a {
+    text-decoration: none;
+}
+
 .nav-bar li:hover {
     background-color: beige;
     color: black;

@@ -23,18 +23,25 @@ function renderIFrame() {
   iframe.src = page;
 }
 
-function turnPage(index) {
-  currentPage = index;
-  page = pages[currentPage];
+function turnPage(linkedPage) {
+  // currentPage = index;
+  // page = pages[currentPage];
+  page = linkedPage;
   loadNavBar();
   renderIFrame();
 }
 
 function linkNavButtons() {
   let navButtons = document.querySelectorAll(".nav-bar li");
+  let anchorLinks = [...navButtons.values()].map((link) => link.children[0]);
 
   for (let i = 0; i < navButtons.length; ++i) {
-    navButtons[i].setAttribute("onclick", `turnPage(${i})`);
+    anchorLinks[i].addEventListener("click", (event) => {
+      event.preventDefault();
+    });
+
+    let link = anchorLinks[i].getAttribute("href");
+    navButtons[i].setAttribute("onclick", `turnPage("${link}")`);
   }
 }
 
