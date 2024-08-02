@@ -10,10 +10,13 @@ function loadNavBar() {
   let navButtons = document.querySelectorAll(".nav-bar li");
 
   for (let i = 0; i < navButtons.length; ++i) {
-    if (i === currentPage) {
-      navButtons[i].setAttribute("style", "background: cornflowerblue;");
+    let button = navButtons[i];
+    let link = button.children[0].getAttribute("href");
+
+    if (link === page) {
+      button.setAttribute("style", "background: cornflowerblue;");
     } else {
-      navButtons[i].setAttribute("style", "background: turqoise;");
+      button.setAttribute("style", "background: turqoise;");
     }
   }
 }

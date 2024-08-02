@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-light: lightgray;
+    --color-dark: darkgray;
+}
+
+@keyframes loading {
+    /* 0%, 100% {
+        background-color: var(--color-light);
+        width: 50px;
+        height: 50px;
+    }
+
+    50%, 60% {
+        background-color: var(--color-dark);
+        width: 52px;
+        height: 52px;
+    } */
+
+    from {
+        background-color: var(--color-light);
+        width: 50px;
+        height: 50px;
+    }
+
+    to {
+        background-color: var(--color-dark);
+        width: 52px;
+        height: 52px;
+    }
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.circle {
+    animation: loading 1s linear infinite alternate;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-dark);
+    border-radius: 50%;
+    /* animation: loading 3s ease-in 0s infinite; */
+}
