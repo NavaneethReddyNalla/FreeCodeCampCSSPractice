@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-word: #5134ff;
+}
+
+@keyframes word-change {
+    0%, 100% {
+        content: "Programming";
+    }
+
+    25% {
+        content: "Mathematics";
+    }
+
+    50% {
+        content: "Gaming";
+    }
+
+    75% {
+        content: "Music";
+    }
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1::after {
+    content: "";
+    animation: word-change 4s infinite linear;
+    color: white;
+    background-color: var(--bg-word);
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}

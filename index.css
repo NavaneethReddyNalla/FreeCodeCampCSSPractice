@@ -19,6 +19,7 @@ header {
 .nav-bar {
     list-style-type: none;
     display: flex;
+    gap: 10px;
     justify-content: space-around;
     align-items: center;
     background-color: rgb(24, 24, 24);
