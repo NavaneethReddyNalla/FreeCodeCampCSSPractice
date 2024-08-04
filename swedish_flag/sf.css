@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #0269A6;
+    --yellow: #FECC00;
+    --flag-height: 150px;
+    --body-bg: #1E1F25;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+.flag {
+    margin: 10rem auto;
+    background-color: var(--blue);
+    height: var(--flag-height);
+    width: calc(var(--flag-height) * 8 / 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.stripe {
+    background-color: var(--yellow);
+}
+
+.stripe-yellow {
+    height: 30px;
+    flex-grow: 1;
+}
+
+.stripe-yellow2 {
+    position: absolute;
+    width: 30px;
+    height: var(--flag-height);
+    left: 75px;
+}
