@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFFFFF;
+    --red: #BC022C;
+    --flag-height: 200px;
+    --body-bg: #1E1F25;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+.flag {
+    background-color: var(--white);
+    margin: 10rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--flag-height);
+    width: calc(var(--flag-height) * 3 / 2);
+}
+
+.circle {
+    --radius: calc(var(--flag-height) * 3 / 5);
+    background-color: var(--red);
+    width: var(--radius);
+    height: var(--radius);
+    border-radius: 50%;
+}
