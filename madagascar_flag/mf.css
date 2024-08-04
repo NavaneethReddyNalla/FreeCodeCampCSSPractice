@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFFFFF;
+    --red: #FC3E32;
+    --green: #007E39;
+    --flag-height: 150px;
+    --flag-width: 225px;
+    --body-bg: #1E1F25;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+.flag-madagascar {
+    height: var(--flag-height);
+    width: var(--flag-width);
+    background-color: white;
+    margin: 13rem auto;
+    display: flex;
+}
+
+.flag-madagascar div:last-child {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+}
+
+.red {
+    background-color: var(--red);
+    flex-grow: 1;
+    height: 50%;
+}
+
+.white {
+    background-color: var(--white);
+    flex-grow: 1;
+}
+
+.green {
+    background-color: var(--green);
+    flex-grow: 1;
+    height: 50%;
+}
