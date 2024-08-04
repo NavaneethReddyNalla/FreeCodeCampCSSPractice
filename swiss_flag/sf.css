@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root { 
+    --white: #fff;
+    --red: #FF0002;
+    --flag-hw: 200px;
+    --body-bg: #1E1F25;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+.flag {
+    background-color: var(--red);
+    width: var(--flag-hw);
+    height: var(--flag-hw);
+    margin: 10rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cross {
+    background-color: var(--white);
+    width: calc(var(--flag-hw) * 3 / 16);
+    height: calc(var(--flag-hw) * 5 / 8);
+}
+
+.cross2 {
+    position: absolute;
+    transform: rotate(90deg);
+}
