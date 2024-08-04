@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #E15307;
+    --white: #FFFFFF;
+    --green: #10AF2A;
+    --flag-height: 200px;
+    --body-bg: #1E1F25;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+.flag {
+    margin: 10rem auto;
+    height: var(--flag-height);
+    width: calc(var(--flag-height) * 7 / 6);
+    display: grid;
+}
+
+.orange {
+    background-color: var(--orange);
+}
+
+.white {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle {
+    --radius: calc(var(--flag-height) * 0.85 / 3);
+    background-color: var(--orange);
+    width: var(--radius);
+    height: var(--radius);
+    border-radius: 100%;
+    position: absolute;
+}
+
+.green {
+    background-color: var(--green);
+}
