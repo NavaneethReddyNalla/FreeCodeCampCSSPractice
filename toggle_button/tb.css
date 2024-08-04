@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+:root {
+    --toggle-switch-bg: #232428;
+    --toggle-border: #232428;
+    --toggle-bg: #fff;
+    --body-bg: #FFFFFF;
+    --toggle-width: 10vw;
+    --circle-radius: 4vw;
+    --checked-color: rgb(26, 26, 26);
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+.toggle-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.toggle-wrap label {
+    width: var(--toggle-width);
+    height: var(--circle-radius);
+    border: solid 4px var(--toggle-border);
+    padding: 0.25rem;
+    background-color: var(--toggle-bg);
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+#toggle {
+    display: none;
+}
+
+.toggle-switch {
+    width: var(--circle-radius);
+    height: var(--circle-radius);
+    background-color: var(--toggle-switch-bg);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+#toggle:checked ~ .toggle-switch {
+    transform: translateX(calc(var(--toggle-width) - var(--circle-radius)));
+    background-color: white;
+}
+
+label:has(>#toggle:checked) {
+    background-color: var(--checked-color);
+}
